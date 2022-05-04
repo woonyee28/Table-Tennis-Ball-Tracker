@@ -6,7 +6,7 @@ date: 2022-05-04T22:16:07+08:00
 ## First Attempt: Filter out the ball and grab contours
 Initially, I plan to use CV2's inRange function to filter out the ball, by adjusting the lower boundary and higher boundary HSV values.
 ![1](/Images/tabletennis1.png)
-But it seems like my video is not suitable for this method because the background and the ping pong table contain a similar color to the white ball, causing the model to misinterpret. I tried to modify the color of the video using premier pro but the effect doesn't help much too.
+But it seems like my video is not suitable for this method because the background and the ping pong table contain a similar color to the white ball, causing the model to misinterpret. I tried to modify the color of the video using Premiere Pro but the effect doesn't help much too.
 
 
 ## Second Attempt: Use Background Subtraction to Track the ball
