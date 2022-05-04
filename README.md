@@ -2,15 +2,6 @@
 title: "Table Tennis Tracker Using OpenCV"
 date: 2022-05-04T22:16:07+08:00
 ---
-## Inspiration
-Hello people! You know life is getting great again when you have ample time to execute your personal projects. (I just finished my Year 1’s final!!!) Anyway, this table tennis tracker thingy has been lying on my project list for quite a long time. It was a fortuitous coincidence for me to be piqued by this computer vision topic. There are mainly two reasons for me doing this:
-1. I accidentally knew someone from Linkedin who did this project before
-2. I found out that XX company’s employees are doing this as a fun after-work project in a company visit
-
-These two things coupled together make me want to give this project a shot.
-
-## Videography
-Before creating a tracking OpenCV model for a table tennis ball, I first need to record a video of me playing table tennis. In the recording process, I tried to take the videos from several angles, filter out the unwanted parts, and compile the usable parts altogether. In the end, I got two short videos. One acts as a training video while the other acts as a testing video.
 
 ## First Attempt: Filter out the ball and grab contours
 Initially, I plan to use CV2's inRange function to filter out the ball, by adjusting the lower boundary and higher boundary HSV values.
