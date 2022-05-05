@@ -10,7 +10,7 @@ But it seems like my video is not suitable for this method because the backgroun
 
 
 ## Second Attempt: Use Background Subtraction to Track the ball
-This method is purposed to track the movement of the ball by subtracting the previous frame from the current frame. I found this method while googling how to track moving objects using OpenCV. OpenCV provides several functions to subtract the background. I chose one of them and got the below result.
+This method is purposed to track the ball's movement by generating a foreground mask *(namely, a binary image containing the pixels belonging to moving objects in the scene)* by using a static camera. I found this method while googling how to track moving objects using OpenCV. OpenCV provides several functions to subtract the background. I chose one of them and got the below result.
 ![2](/Images/tabletennis2.png)
 As you can see, this method removes the other unnecessary white traces.  Only the ball is left in the processed frame.
 
