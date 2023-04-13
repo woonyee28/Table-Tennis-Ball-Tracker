@@ -21,6 +21,6 @@ Github Code: [Read Me](https://github.com/woonyee28/tt_tracker)
 
 ## How to run the code?   
 To install the dependencies:   
-``` pip install -r requirements.txt ```
-To run the python file:
-``` python tabletennis.py ```
+``` pip install -r requirements.txt ```   
+To run the python file:   
+``` python tabletennis.py ```   
