@@ -1,26 +1,25 @@
----
-title: "Table Tennis Tracker Using OpenCV"
-date: 2022-05-04T22:16:07+08:00
----
-
-## First Attempt: Filter out the ball and grab contours
-Initially, I plan to use CV2's inRange function to filter out the ball, by adjusting the lower boundary and higher boundary HSV values.
+# Table Tennis Tracker using OpenCV   
+This project aims to track the movement of a table tennis ball in a video using OpenCV, a popular computer vision library. The process involves filtering out the ball, generating a foreground mask, and then adding circles to the original frames to visualize the ball's movement.   
+   
+## Approach
+### First Attempt: Filter out the ball and grab contours
+Initially, we attempted to filter out the ball from the video using the inRange function from CV2 by adjusting the lower and upper HSV values.    
 ![1](/Images/tabletennis1.png)
-But it seems like my video is not suitable for this method because the background and the ping pong table contain a similar color to the white ball, causing the model to misinterpret. I tried to modify the color of the video using Premiere Pro but the effect doesn't help much too.
+However, the background and ping pong table's color was too similar to the ball's white color, causing the model to misinterpret. We even tried modifying the video color using Premiere Pro, but it was not effective.     
 
 
-## Second Attempt: Use Background Subtraction to Track the ball
-This method is purposed to track the ball's movement by generating a foreground mask *(namely, a binary image containing the pixels belonging to moving objects in the scene)* by using a static camera. I found this method while googling how to track moving objects using OpenCV. OpenCV provides several functions to subtract the background. I chose one of them and got the below result.
+### Second Attempt: Use Background Subtraction to Track the ball
+We then tried using background subtraction to track the ball's movement by generating a foreground mask, which is a binary image containing the pixels belonging to moving objects in the scene, using a static camera. OpenCV provides several functions to subtract the background, and we chose one of them.   
 ![2](/Images/tabletennis2.png)
-As you can see, this method removes the other unnecessary white traces.  Only the ball is left in the processed frame.
+This method successfully removed unnecessary white traces, leaving only the ball in the processed frame.
 
-## Find corners in the video, add circles and export
-After implementing the background subtraction successfully, all left for me is to identify the white color in the processed frames and add circles to the original frames.  
+### Adding Circles to the Original Frame
+After implementing background subtraction successfully, we identified the white color in the processed frames and added circles to the original frames. The final video output can be found here:
 Final video: [Click Here](https://youtu.be/vu5ulU8vvO4)  
 Github Code: [Read Me](https://github.com/woonyee28/tt_tracker)
 
 ## How to run the code?   
-To install the dependencies:   
+To install the dependencies, run:   
 ``` pip install -r requirements.txt ```   
-To run the python file:   
+To run the python file, run:   
 ``` python tabletennis.py ```   
