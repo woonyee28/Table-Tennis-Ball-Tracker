@@ -14,9 +14,9 @@ We then tried using background subtraction to track the ball's movement by gener
 This method successfully removed unnecessary white traces, leaving only the ball in the processed frame.
 
 ### Adding Circles to the Original Frame
-After implementing background subtraction successfully, we identified the white color in the processed frames and added circles to the original frames. The final video output can be found here:
-Final video: [Click Here](https://youtu.be/vu5ulU8vvO4)  
-Github Code: [Read Me](https://github.com/woonyee28/tt_tracker)
+After implementing background subtraction successfully, we identified the white color in the processed frames and added circles to the original frames. The final video output can be found here:   
+Final video: [Click Here](https://youtu.be/vu5ulU8vvO4)     
+Github Code: [Read Me](https://github.com/woonyee28/tt_tracker)    
 
 ## How to run the code?   
 To install the dependencies, run:   
