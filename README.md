@@ -18,3 +18,9 @@ As you can see, this method removes the other unnecessary white traces.  Only th
 After implementing the background subtraction successfully, all left for me is to identify the white color in the processed frames and add circles to the original frames.  
 Final video: [Click Here](https://youtu.be/vu5ulU8vvO4)  
 Github Code: [Read Me](https://github.com/woonyee28/tt_tracker)
+
+## How to run the code?   
+To install the dependencies:   
+``` pip install -r requirements.txt ```
+To run the python file:
+``` python tabletennis.py ```
